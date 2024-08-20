@@ -1,0 +1,28 @@
+= Node.js API proxy / gateway for development environment
+:nofooter:
+:idprefix:
+:idseparator: -
+// URIs
+:uri-http-proxy: https://github.com/http-party/node-http-proxy
+:uri-apigee: https://cloud.google.com/apigee/docs/api-platform/get-started/what-apigee
+// Attributes
+:http-proxy: {uri-http-proxy}[http-proxy]
+:Apigee: {uri-apigee}[Apigee]
+
+This project, built upon the {http-proxy} package, demonstrates how you can build a development proxy to simulate (in a very basic way) the behavior of corporate proxies such as {Apigee}.
+
+The basic idea of this project, in addition to being educational, is to facilitate the development of solutions in environments where access to a proxy server that is not available would be necessary.
+
+After clone this project you can run it this way:
+
+----
+$ npm i
+
+$ node index.js
+----
+
+This will start the server on port 3000 (you will need to change link:index.js[] to use a different port).
+
+The server will read the contents of the file `config.js` (it will be provided soon) and wait for requests.
+
+The responses will be produced based on your configuration.
